@@ -1,0 +1,191 @@
+:root {
+  --primary: #FF69B4;
+  --secondary: #FF1493;
+  --accent: #FFB6C1;
+  --success: #28a745;
+  --warning: #ffc107;
+  --error: #dc3545;
+  --light: #f8f9fa;
+  --dark: #1c1e21;
+  --gray-100: #f0f2f5;
+  --gray-200: #e4e6eb;
+  --gray-300: #ccd0d5;
+  --gray-400: #9a9ea6;
+  --gray-500: #65676b;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+.section-heading {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.section-heading h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+.section-heading p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--gray-500);
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 105, 180, 0.15);
+}
+
+.navbar {
+  padding: 15px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 5px 20px rgba(255, 105, 180, 0.1);
+  padding: 10px 0;
+}
+
+.contact-form {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  padding: 3rem 0;
+  color: white;
+}
+
+.contact-form .form-control {
+  border-radius: 8px;
+  padding: 0.8rem;
+  border: none;
+}
+
+.contact-form .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.btn-contact {
+  background-color: white;
+  color: var(--primary);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--accent);
+  color: var(--dark);
+}
+
+.engagement-circle {
+  transition: transform 0.3s ease;
+}
+
+.engagement-circle:hover {
+  transform: scale(1.05);
+}
+
+.message-bubble {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+}
+
+.message-bubble:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.15);
+}
+
+.testimonials-wrapper {
+  background: rgba(255, 105, 180, 0.05);
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.nav-link {
+  color: var(--dark) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.social-icon {
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--secondary);
+  transform: translateY(-2px);
+}
