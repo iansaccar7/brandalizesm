@@ -37,11 +37,11 @@ app.post('/send-email', (req, res) => {
   const { nome, email, assunto, mensagem } = req.body;
 
   const mailOptions = {
-  from: `"${nome}" <${email}>`,  // Corrigido: Inclui o nome da pessoa que enviou
-  to: process.env.EMAIL_USER,    // Seu e-mail para receber a mensagem
-  replyTo: `"${nome}" <${email}>`,  // Quando alguém responder, a resposta vai para o e-mail da pessoa
-  subject: assunto,
-  html: `
+    from: `"${nome}" <${email}>`,  // Corrigido: Inclui o nome da pessoa que enviou
+    to: process.env.EMAIL_USER,    // Seu e-mail para receber a mensagem
+    replyTo: `"${nome}" <${email}>`,  // Quando alguém responder, a resposta vai para o e-mail da pessoa
+    subject: assunto,
+    html: `
     <p>Você recebeu uma nova mensagem do formulário de contato:</p>
     <p><strong>Nome:</strong> ${nome}</p>
     <p><strong>E-mail:</strong> <a href="mailto:${email}">${email}</a></p>
@@ -51,7 +51,7 @@ app.post('/send-email', (req, res) => {
     <br>
     <p>Este e-mail foi enviado através do seu site.</p>
   `
-};
+  };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {

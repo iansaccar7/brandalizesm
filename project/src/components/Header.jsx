@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import perfil from "../assets/perfil.jpg";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,9 +22,9 @@ function Header() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   return (
     <Navbar
@@ -35,7 +36,7 @@ function Header() {
       <Container>
         <Navbar.Brand href="#home" className="d-flex align-items-center">
           <img
-            src="https://userfiles.sdwc.me/18523de87ffea896d6599.webp"
+            src={perfil}
             alt="Dayane Brandalize"
             className="rounded-circle me-2"
             style={{
@@ -46,7 +47,9 @@ function Header() {
             }}
             onClick={scrollToTop}
           />
-          <span className="fw-bold text-primary" onClick={scrollToTop}>Brandalize Social Media</span>
+          <span className="fw-bold text-primary" onClick={scrollToTop}>
+            Brandalize Social Media
+          </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
