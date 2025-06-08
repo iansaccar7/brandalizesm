@@ -18,12 +18,19 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
+
   return (
     <Navbar
       expand="lg"
       fixed="top"
       className={scrolled ? "scrolled" : ""}
-      bg={scrolled ? "white" : "transparent"}
+      bg={scrolled ? "white" : "white"}
     >
       <Container>
         <Navbar.Brand href="#home" className="d-flex align-items-center">
@@ -37,8 +44,9 @@ function Header() {
               objectFit: "cover",
               border: "2px solid var(--primary)",
             }}
+            onClick={scrollToTop}
           />
-          <span className="fw-bold text-primary">Brandalize Social Media</span>
+          <span className="fw-bold text-primary" onClick={scrollToTop}>Brandalize Social Media</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

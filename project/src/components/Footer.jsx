@@ -2,7 +2,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import {
   FaEnvelope,
   FaPhone,
-  FaMapMarkerAlt,
   FaInstagram,
   FaWhatsapp,
 } from "react-icons/fa";
@@ -47,7 +46,7 @@ function Footer() {
               </li>
               <li className="mb-3 d-flex">
                 <FaEnvelope className="me-2 mt-1" />
-                <span>contato@brandalize.com.br</span>
+                <span>dayanebrandalize2024@gmail.com</span>
               </li>
             </ul>
           </Col>
